@@ -1,0 +1,16 @@
+FROM python:3.11-alpine
+
+WORKDIR /src
+
+RUN apk update && \
+    apk add --no-cache gcc musl-dev libffi-dev
+
+
+COPY requirements.txt /deployment/
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . /src/
+
+EXPOSE 8000
+
+CMD ["uvicorn", "src:main", "--host", "0.0.0.0",
