@@ -12,11 +12,19 @@ class GetStock():
     def stock_fundamentals(self, symbol):
         self.stock = yf.Ticker(symbol)
         self.info = self.stock.info
+        self.payload =  self.stock.info
+        self.symbol = self.stock.info['symbol']
+        self.previousClose  = self.info['previousClose']
+        self.trailingPe  = self.info['trailingPE']
+        if 'dividendYield' in self.payload:
+            self.div = self.payload['dividendYield']
+        else:
+            self.div = 0
         self.payload = {
-            symbol:
+            self.symbol:
             {
-            "dividends" : self.info['dividendYield'],
-            "previousClose": self.info['previousClose']
+            "value":self.previousClose,
+            "price_earnings":self.trailingPe,
+            "dividend_yield":self.div
             }
-            
         }
