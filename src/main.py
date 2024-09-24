@@ -1,11 +1,11 @@
 from fastapi import FastAPI
-from handlers.getstock import GetStock
+from handlers.getsymbol import getSymbol
 import yfinance as yf
 
 app = FastAPI()
-stock = GetStock()
+stock = getSymbol()
 
 @app.get("/stock/{symbol}")
-async def get_symbol(symbol : str):
+async def get_symbol_fundamentals(symbol : str):
     stock.stock_fundamentals(symbol)
     return stock.payload

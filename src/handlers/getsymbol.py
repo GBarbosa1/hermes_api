@@ -1,6 +1,6 @@
 import yfinance as yf
 
-class GetStock():
+class getSymbol():
     
     def __init__(self):
         self.stock = None
@@ -25,6 +25,6 @@ class GetStock():
             {
             "value":self.previousClose,
             "price_earnings":self.trailingPe,
-            "dividend_yield":self.div
+            "dividend_yield":(self.div)*100
             }
         }
