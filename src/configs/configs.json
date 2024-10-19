@@ -1,4 +1,6 @@
 {
     "bcb_base_url":"https://api.bcb.gov.br/dados/serie/",
-    "bsb_selic_endpoint":"bcdata.sgs.1178/dados/ultimos/1?formato=json"
+    "bcb_selic_endpoint":"bcdata.sgs.1178/dados/ultimos/1?formato=json",
+    "bcb_ipca_endpoint":"bcdata.sgs.10841/dados/ultimos/1?formato=json"
+
 }
