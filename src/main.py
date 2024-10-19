@@ -16,3 +16,8 @@ async def get_symbol_fundamentals(symbol : str):
 async def actual_brazilian_interest_rate():
     bcb.get_brazil_actual_selic()
     return bcb.payload
+
+@app.get("/actual_brazilian_inflation/")
+async def actual_brazilian_inflation():
+    bcb.get_brazil_actual_inflation()
+    return bcb.payload

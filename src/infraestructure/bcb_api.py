@@ -11,6 +11,7 @@ class getBcbData():
             configs = json.load(file)
         self.selic_url = configs['bcb_base_url'] + configs['bcb_selic_endpoint']
         self.inflation_url = configs['bcb_base_url'] + configs['bcb_ipca_endpoint']
+        print(self.inflation_url)
 
 
     def get_brazil_actual_selic(self):
@@ -23,4 +24,6 @@ class getBcbData():
             
     def get_brazil_actual_inflation(self):
         api_operator.get(self.inflation_url)
-        return api_operator.payload
+        logging.info(api_operator.payload)
+        self.payload = api_operator.payload
+        return self.payload 
