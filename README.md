@@ -1,6 +1,3 @@
-# Let's write the provided README content into a .md file.
-
-readme_content = """
 # Hermes API
 
 Welcome to the **Hermes API** repository! 🚀 This project is designed to serve as a flexible, scalable data pipeline that wraps around multiple public APIs. Built using **FastAPI**, the Hermes API is engineered to streamline data acquisition and transformation, making it the backbone of our data engineering processes.
