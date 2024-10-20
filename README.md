@@ -6,12 +6,6 @@ Welcome to the **Hermes API** repository! 🚀 This project is designed to serve
 - [Project Overview](#project-overview)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
-- [Setup Instructions](#setup-instructions)
-- [Usage](#usage)
-- [API Endpoints](#api-endpoints)
-- [Roadmap](#roadmap)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Project Overview
 
